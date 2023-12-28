@@ -76,7 +76,7 @@ The backend of Law Lens serves as the core engine handling data storage, retriev
 1. Change directory:
 
 ```bash
-cd Lawlens-Backend
+cd LawLens/Lawlens-Backend
 ```
 
 2. Install dependencies:
