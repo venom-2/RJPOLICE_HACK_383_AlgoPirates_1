@@ -1,11 +1,11 @@
 # Law Lens
 
 Law Lens is an Online Platform that minimizes the gap between Police and Citizens by allowing citizens to
-### File a FIR online
-### Tracking of your filed FIR
-### Connecting with police officials in a single click by booking advance appointments
-### During an emergency, find the nearest police station/policeman around you
-### It allows citizens to provide feedback of a particular police station
+- File a FIR online
+- Tracking of your filed FIR
+- Connecting with police officials in a single click by booking advance appointments
+- During an emergency, find the nearest police station/policeman around you
+- It allows citizens to provide feedback of a particular police station
 
 ## Frontend
 
