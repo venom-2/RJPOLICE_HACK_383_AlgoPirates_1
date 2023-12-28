@@ -9,6 +9,8 @@ Law Lens is an Online Platform that minimizes the gap between Police and Citizen
 
 ## Frontend
 
+![Screenshot 2023-12-28 172200](https://github.com/venom-2/RJPOLICE_HACK_383_AlgoPirates_1/assets/103876428/34283271-ee7c-4f8f-864b-8e08ade002d3)
+
 ### Overview
 
 The front end of Law Lens is built using modern web technologies to provide an intuitive and user-friendly interface. It offers document search, case management, and interactive tools to enhance user-friendliness and transparency.
@@ -58,6 +60,8 @@ npm start
 6. Submit a pull request to the main repository.
 
 ## Backend
+
+![WhatsApp Image 2023-12-28 at 17 27 47_4aa42cbe](https://github.com/venom-2/RJPOLICE_HACK_383_AlgoPirates_1/assets/103876428/e7dabc86-7225-460f-b8c1-300f1c5897c9)
 
 ### Overview
 
