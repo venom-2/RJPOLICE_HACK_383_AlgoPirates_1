@@ -16,7 +16,7 @@ export default function Header() {
           <Nav className="me-auto"></Nav>
           <Nav>
             <Link to="/" className="link">
-              User Sign Up
+              Sign Up
             </Link>
             <Link className="link" eventKey={2} to="/">
               Sign In
