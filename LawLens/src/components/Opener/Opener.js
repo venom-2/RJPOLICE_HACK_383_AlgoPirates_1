@@ -14,7 +14,7 @@ export default function Opener() {
           data-aos-duration="370"
           className="heading"
         >
-          LAW LENS
+        
         </Heading>
       </Container>
     </Main>

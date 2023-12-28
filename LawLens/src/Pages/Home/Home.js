@@ -8,7 +8,7 @@ import Importance from "../../components/Importance/Importance";
 import Mission from "../../components/Mission/Mission";
 import Team from "../../components/Team/Team";
 import "aos/dist/aos.css";
-import AOS from "aos";
+import AOS from "aos"; 
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
