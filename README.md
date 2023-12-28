@@ -109,13 +109,14 @@ npm start
 ### API Endpoints
 
 - **POST /api/auth/login**:
-- ```
+  ```
   {
   "Email" : "user@gmail.com",
   "password" : "xxxxxxxx"
-  }```
+  }
+  ```
 - **GET /api/auth/createuser**:
-- ```
+  ```
   {
   "Username" : "Name of user",
   "Email" : "user@gmail.com",
@@ -123,7 +124,7 @@ npm start
   "Adhar Number" : "XXXX1131331",
   "mobile Number" : "73787786xxx"
   }
- ```
+  ```
 
 
 ### Contribution Guidelines
