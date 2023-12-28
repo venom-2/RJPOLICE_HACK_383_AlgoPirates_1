@@ -24,8 +24,8 @@ The front end of Law Lens is built using modern web technologies to provide an i
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/law-lens-frontend.git
-cd law-lens-frontend
+git clone https://github.com/your-username/RJPOLICE_HACK_383_AlgoPirates_1.git
+cd LawLens
 ```
 
 2. Install dependencies:
@@ -73,17 +73,21 @@ The backend of Law Lens serves as the core engine handling data storage, retriev
 
 ### Getting Started
 
-1. Clone the repository:
+1. Change directory:
 
 ```bash
-git clone https://github.com/your-username/law-lens-backend.git
-cd law-lens-backend
+cd Lawlens-Backend
 ```
 
 2. Install dependencies:
 
 ```bash
-npm install
+npm install express
+npm install mongoose
+npm install -D nodemon
+npm install bcrypt
+npm install express-validator
+npm install jsonwebtoken
 ```
 
 3. Set up environment variables by creating a `.env` file:
