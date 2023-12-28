@@ -48,6 +48,15 @@ npm start
 - **Case Management**: Organize and manage legal cases with detailed information and document attachments.
 - **Interactive Tools**: Auto Chatbot and Bulk SMS Tool.
 
+### Contribution Guidelines
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature`.
+3. Make your changes and test thoroughly.
+4. Commit your changes: `git commit -m "Add new feature"`.
+5. Push to the branch: `git push origin feature/new-feature`.
+6. Submit a pull request to the main repository.
+
 ## Backend
 
 ### Overview
@@ -67,7 +76,7 @@ The backend of Law Lens serves as the core engine handling data storage, retriev
 1. Change directory:
 
 ```bash
-cd LawLens/Lawlens-Backend
+cd Lawlens-Backend
 ```
 
 2. Install dependencies:
@@ -99,16 +108,23 @@ npm start
 
 ### API Endpoints
 
-- **GET /api/documents**: Retrieve a list of legal documents.
-- **GET /api/documents/:id**: Retrieve a specific legal document by ID.
-- **POST /api/documents**: Add a new legal document.
-- **PUT /api/documents/:id**: Update an existing legal document.
-- **DELETE /api/documents/:id**: Delete a legal document.
-- **GET /api/cases**: Retrieve a list of legal cases.
-- **GET /api/cases/:id**: Retrieve a specific legal case by ID.
-- **POST /api/cases**: Add a new legal case.
-- **PUT /api/cases/:id**: Update an existing legal case.
-- **DELETE /api/cases/:id**: Delete a legal case.
+- **POST /api/auth/login**:
+- ```
+  {
+  "Email" : "user@gmail.com",
+  "password" : "xxxxxxxx"
+  }```
+- **GET /api/auth/createuser**:
+- ```
+  {
+  "Username" : "Name of user",
+  "Email" : "user@gmail.com",
+  "password" : "xxxxxxxx",
+  "Adhar Number" : "XXXX1131331",
+  "mobile Number" : "73787786xxx"
+  }
+ ```
+
 
 ### Contribution Guidelines
 
