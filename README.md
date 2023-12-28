@@ -1,17 +1,17 @@
 # Law Lens
 
-Law Lens is an Online Platform which minimizes the gap between Police and Citizens by allowing citizens to
-###File a FIR online
-###Tracking of your filed FIR
-###Connecting with police officials in a single click by booking advance appointments
-###During emergency, finding the nearest police station/police man around you
-###It allows citizens to provide feedback of particular police station
+Law Lens is an Online Platform that minimizes the gap between Police and Citizens by allowing citizens to
+### File a FIR online
+### Tracking of your filed FIR
+### Connecting with police officials in a single click by booking advance appointments
+### During an emergency, find the nearest police station/policeman around you
+### It allows citizens to provide feedback of a particular police station
 
 ## Frontend
 
 ### Overview
 
-The frontend of Law Lens is built using modern web technologies to provide an intuitive and user-friendly interface. It offers features such as document search, case management, and interactive tools to enhance the user friendliness and transparency.
+The front end of Law Lens is built using modern web technologies to provide an intuitive and user-friendly interface. It offers document search, case management, and interactive tools to enhance user-friendliness and transparency.
 
 ### Technologies Used
 
@@ -61,7 +61,7 @@ npm start
 
 ### Overview
 
-The backend of Law Lens serves as the core engine handling data storage, retrieval, and business logic. It provides a RESTful API that the frontend communicates with to perform operations such as document retrieval, case management, and user authentication.
+The backend of Law Lens serves as the core engine handling data storage, retrieval, and business logic. It provides a RESTful API that the front end communicates with to perform document retrieval, case management, and user authentication operations.
 
 ### Technologies Used
 
