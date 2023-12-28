@@ -48,15 +48,6 @@ npm start
 - **Case Management**: Organize and manage legal cases with detailed information and document attachments.
 - **Interactive Tools**: Auto Chatbot and Bulk SMS Tool.
 
-### Contribution Guidelines
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature`.
-3. Make your changes and test thoroughly.
-4. Commit your changes: `git commit -m "Add new feature"`.
-5. Push to the branch: `git push origin feature/new-feature`.
-6. Submit a pull request to the main repository.
-
 ## Backend
 
 ### Overview
