@@ -1,5 +1,4 @@
 
-
 .header{
     display: flex;
     flex-direction: column;
@@ -35,7 +34,7 @@
     margin: auto;
     width: 480px;
     height: 60px;
-    background: rgb(237, 237, 237);
+    background: rgb(12, 12, 12);
     border-radius: 6px;
     border-bottom: 3px solid #ffb613;
 }
