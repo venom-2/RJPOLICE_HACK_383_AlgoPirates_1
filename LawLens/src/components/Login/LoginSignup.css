@@ -1,4 +1,5 @@
 
+
 .header{
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@
     margin: auto;
     width: 480px;
     height: 60px;
-    background: rgb(12, 12, 12);
+    background: rgb(237, 237, 237);
     border-radius: 6px;
     border-bottom: 3px solid #ffb613;
 }
@@ -80,16 +81,17 @@ img{
     align-items: center;
     width: 220px;
     height: 59px;
-    color: #fff;
-    background: #ffb613;
+    /* color: #0d0c0c; */
+    /* background: #171615; */
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    margin-left: 33rem ;
 }
 
 .gray{
-    background: #EAEAEA;
-    color: #ffb613;
+    background: #ffb613;
+    color: #0a0a0a;
     border: 2px solid #ffb613;
 }
