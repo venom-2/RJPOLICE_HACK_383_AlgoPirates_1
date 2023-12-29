@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -7,7 +7,7 @@
     padding-bottom: 30px;
     width:600px;
     border-radius: 50px;
-}
+} */
 
 .header{
     display: flex;

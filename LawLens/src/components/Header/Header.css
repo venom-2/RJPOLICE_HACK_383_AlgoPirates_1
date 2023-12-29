@@ -4,14 +4,14 @@
   padding: 1rem 0;
 }
 
-.link1 {
+.link {
   color: rgb(71, 71, 71);
   margin: 0 1rem;
   font-size: 1.5rem;
   text-decoration: none;
 }
 
-.link2 {
+/* .link2 {
   color: rgb(71, 71, 71);
   margin: 0 1rem;
   font-size: 1.5rem;
@@ -29,7 +29,7 @@
   background-color: rgb(220, 234, 128);
   border-radius: 20px;
   padding: 5px 10px;
-}
+} */
 #responsive-navbar-nav .link:hover {
   color: rgb(0, 0, 0);
 }

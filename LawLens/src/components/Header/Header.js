@@ -1,24 +1,31 @@
 import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 // import loginSignup from "../../components/Login/LoginSignup";
 
+
+
 export default function Header() {
+  // const history = useHistory();
+  // const loginPerJa = (e) => {
+  //   e.preventDefault();
+  //   history.push("./login");
+  // }
   return (
     <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar">
       <Container>
-        <Link className="link1" to="/">
+        <Link className="link" to="/">
           <h2>LawLens</h2>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Link to="/Login" className="link2">
+            <Link to="/login"  className="link">
               Sign Up
             </Link>
-            <Link className="link3" eventKey={2} to="/">
+            <Link className="link" eventKey={2} to="/">
               Sign In
             </Link>
           </Nav>
