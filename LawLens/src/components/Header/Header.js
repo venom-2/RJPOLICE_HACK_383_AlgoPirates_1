@@ -22,10 +22,10 @@ export default function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Link to="/login"  className="link">
+            <Link to="/signup"  className="link">
               Sign Up
             </Link>
-            <Link className="link" eventKey={2} to="/">
+            <Link className="link" eventKey={2} to="/signin">
               Sign In
             </Link>
           </Nav>
