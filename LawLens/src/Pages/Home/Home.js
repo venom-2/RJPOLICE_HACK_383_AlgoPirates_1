@@ -28,6 +28,7 @@ export default function Home() {
         </div>
       ) : (
         <main id="home">
+          <Header/>
           <GetStarted />
           <Importance />
           <Mission />
