@@ -5,12 +5,14 @@ import mail from "../../assets/mail.png";
 import padlock from "../../assets/padlock.png";
 import number from "../../assets/number.png";
 import dial from "../../assets/dial.png";
+import Header from "../Header/Header";
 
 
 export default function LoginSignup () {
 
   return (
     <div className='container'>
+      <Header/>
       <div className="header">
         <div className="text">Sign Up</div>
         <div className="underline"></div>

@@ -1,0 +1,10 @@
+#role{
+    width: 100%;
+}
+
+.gray1{
+    margin-left: 42rem ;
+    background: #ffb613;
+    color: #0a0a0a;
+    border: 2px solid #ffb613;
+}
