@@ -8,17 +8,17 @@ export default function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar">
       <Container>
-        <Link className="link" to="/">
+        <Link className="link1" to="/">
           <h2>LawLens</h2>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Link to="/" className="link">
+            <Link to="/Login" className="link2">
               Sign Up
             </Link>
-            <Link className="link" eventKey={2} to="/">
+            <Link className="link3" eventKey={2} to="/">
               Sign In
             </Link>
           </Nav>
