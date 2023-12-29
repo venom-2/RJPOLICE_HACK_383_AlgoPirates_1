@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./LoginSignup.css";
-import user from "../../assets/user.png"
-import mail from "../../assets/mail.png"
-import padlock from "../../assets/padlock.png"
-import number from "../../assets/number.png"
-import dial from "../../assets/dial.png"
+import user from "../../assets/user.png";
+import mail from "../../assets/mail.png";
+import padlock from "../../assets/padlock.png";
+import number from "../../assets/number.png";
+import dial from "../../assets/dial.png";
 
 
 export default function LoginSignup () {
