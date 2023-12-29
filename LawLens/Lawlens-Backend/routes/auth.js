@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const User = require('../models/User'); 
 
-const JWT_SECRET = "@@@@";
+const JWT_SECRET = "@@@@";  
 
 
 const {body, validationResult} = require('express-validator');
