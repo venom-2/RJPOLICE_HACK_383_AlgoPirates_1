@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import "./LoginSignup.css";
+import user from "../../assets/user.png"
+import mail from "../../assets/mail.png"
+import padlock from "../../assets/padlock.png"
+import number from "../../assets/number.png"
+import dial from "../../assets/dial.png"
+
 
 export default function LoginSignup () {
 
@@ -12,23 +18,23 @@ export default function LoginSignup () {
       </div>
       <div className="inputs">
         {action==="Log In"?<div></div>:<div className="input">
-          <img src="../Assets/user.png" alt="" />
+          <img src={user} alt="" />
           <input type="text" name="" id="" placeholder='User Name' />
         </div>}
         <div className="input">
-          <img src="../Assets/mail.png" alt="" />
+          <img src={mail} alt="" />
           <input type="email" name="" id="" placeholder='Email'/>
         </div>
         <div className="input">
-          <img src="../Assets/padlock.png" alt="" />
+          <img src={padlock} alt="" />
           <input type="password" name="" id="" placeholder='Password'/>
         </div>
         {action==="Log In"?<div></div>:<div className="input">
-          <img src="../Assets/number.png" alt="" />
+          <img src={number} alt="" />
           <input type="tel" name="" id="" placeholder='Aadhar Number'/>
         </div>}
         {action==="Log In"?<div></div>:<div className="input">
-          <img src="../Assets/dial.png" alt="" />
+          <img src={dial} alt="" />
           <input type="tel" name="" id="" placeholder='Mobile Number'/>
         </div>}
       </div>

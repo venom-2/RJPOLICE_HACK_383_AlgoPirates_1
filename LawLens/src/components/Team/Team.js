@@ -1,9 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./Team.css";
-import member1 from "../../assets/member1.png";
-import member2 from "../../assets/member2.png";
-import member3 from "../../assets/member3.png";
 
 export default function Team() {
   return (
