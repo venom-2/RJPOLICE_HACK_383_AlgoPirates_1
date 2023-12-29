@@ -48,6 +48,7 @@ export default function LoginSignup () {
   const [action,setAction]=useState("Sign Up");
   return (
     <div className='container'>
+      <Header/>
       <div className="header">
         <div className="text">{action}</div>
         <div className="underline"></div>
