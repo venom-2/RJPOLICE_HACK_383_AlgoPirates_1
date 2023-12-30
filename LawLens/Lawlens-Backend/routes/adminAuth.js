@@ -59,6 +59,51 @@ router.post('/create', [
 
 });
 
+// Route-02 : For admin Login
+router.post('/login', [
+    body('email', ' Enter correct Email').isEmail(),
+    body('password', 'Enter password').exists(),
+], async (req, res) => {
+    const result = validationResult(req);
+
+    // User creation using express-validator -- No login required
+
+    if (!result.isEmpty()) {
+        res.send({ errors: result.array() });
+    }
+
+    // De-structuring request
+    const { email, password } = await req.body;
+    try { 
+
+        // finding admin with entered Email
+        let admin = await Admin.findOne({ email: email });
+
+        // checking is admin with given mail exist
+        if (!admin) {
+            return res.status(400).json({ errors: "Please enter correct Credentials" });
+        }
+
+        // Comparing for password
+        const containsPass = await bcrypt.compare(password, admin.password);
+        if (!containsPass) {
+            return res.status(400).json({ errors: "Please enter correct Credentials" });
+        }
+
+        // if all well generate a auth token and return
+        const Data = {
+            id: admin.id
+        }
+        const authToken = jwt.sign(Data, JWT_SECRET);
+        res.json({ authToken });
+
+    } catch (error) {
+        console.error("Login Error:", error);
+        res.status(500).send("Something went Wrong!");
+    }
+})
+
+
 module.exports = router;
 
 
