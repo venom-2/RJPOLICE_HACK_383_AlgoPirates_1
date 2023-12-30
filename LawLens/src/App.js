@@ -7,6 +7,7 @@ import signin from "./components/Login/SignIn";
 import Dasboard from "./Dashboard/App";
 import AddAdmin from "./Dashboard/AddAdmin";
 import FIR from "./Dashboard/FIR";
+import userdashboard from "./user-dashboard/App";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/dashboard" component={Dasboard} />
           <Route exact path='/AddAdmin' component={AddAdmin} />
           <Route exact path='/fir' component={FIR} />
+          <Route exact path='/userdashboard' component={userdashboard} />
         </Switch>
       </BrowserRouter>
     </div>

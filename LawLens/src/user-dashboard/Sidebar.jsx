@@ -10,34 +10,34 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand'>
-                LawLens-Admin Dashboard
+                LawLens-User Dashboard
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
 
         <ul className='sidebar-list'>
-            <Link to="/dashboard">
+            <Link to="/userdashboard">
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsGrid1X2Fill className='icon'/> Dashboard
                     </a>
                 </li>
             </Link>
-            <Link to="/AddAdmin">
+            {/* <Link to="/AddAdmin"> */}
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsPeopleFill className='icon'/>  Manage Admins
                     </a>
                 </li>
-            </Link>
-            <Link to="/fir">
+            {/* </Link> */}
+            {/* <Link to="/fir"> */}
 
             <li className='sidebar-list-item'>
                 <a href="">
                     <BsFillGrid3X3GapFill className='icon'/> Active FIR
                 </a>
             </li>
-            </Link>
+            {/* </Link> */}
 
             {/* <li className='sidebar-list-item'>
                 <a href="">
