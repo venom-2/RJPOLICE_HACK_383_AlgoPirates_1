@@ -16,21 +16,21 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
         </div>
 
         <ul className='sidebar-list'>
-            <Link to="/dashboard">
+            <Link to="/dashboard" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsGrid1X2Fill className='icon'/> Dashboard
                     </a>
                 </li>
             </Link>
-            <Link to="/AddAdmin">
+            <Link to="/AddAdmin" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsPeopleFill className='icon'/>  Manage Admins
                     </a>
                 </li>
             </Link>
-            <Link to="/fir">
+            <Link to="/fir" style={{ textDecoration: 'none' }}>
 
             <li className='sidebar-list-item'>
                 <a href="">

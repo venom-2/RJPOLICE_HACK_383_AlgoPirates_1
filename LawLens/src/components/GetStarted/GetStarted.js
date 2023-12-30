@@ -45,7 +45,7 @@ export default function GetStarted() {
             data-aos-duration="1000"
             easing="ease-in"
           >
-            <Link to="/signup">
+            <Link to="/signup" style={{ textDecoration: 'none' }}>
               <strong>Get Started</strong>
             </Link>
           </button>
