@@ -101,7 +101,7 @@ router.post('/login', [
         const authToken = jwt.sign(Data, JWT_SECRET);
         res.json({ authToken });
 
-    } catch (error) {
+    } catch (error) { 
         // console.error("Login Error:", error);
         res.status(500).send("Something went Wrong!");
     }

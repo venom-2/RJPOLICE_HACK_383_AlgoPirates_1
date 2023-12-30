@@ -31,7 +31,7 @@ const SignIn = () => {
 
         const json = await response.json();
         console.log(json);
-        history.push('./');
+        history.push('./userdashboard');
       } else if (cred.usertype === 'admin')  {
         const response = await fetch("http://localhost:3001/api/adminauth/login", {
           method: 'POST',
