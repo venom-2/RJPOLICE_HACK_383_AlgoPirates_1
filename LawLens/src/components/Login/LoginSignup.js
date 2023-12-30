@@ -6,9 +6,12 @@ import padlock from "../../assets/padlock.png"
 import number from "../../assets/number.png"
 import dial from "../../assets/dial.png"
 import Header from "../Header/Header"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 export default function LoginSignup() {
+
+  const history = useHistory();
 
   const [cred, setCred] = useState({ username: "", email: "", password: "", adharno: "", mobileno: "" })
 
@@ -37,6 +40,7 @@ export default function LoginSignup() {
       const json = await response.json();
       console.log(json);
       console.log("completed");
+      history.push('./signin')
     } catch (error) {
       console.error('Error during fetch:', error);
     }

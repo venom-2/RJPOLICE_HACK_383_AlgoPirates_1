@@ -77,7 +77,7 @@ router.post('/login', [
 
     // De-structuring request
     const { email, password } = await req.body;
-    try {
+    try { 
 
         // finding user with entered Email
         let user = await User.findOne({ email: email });
