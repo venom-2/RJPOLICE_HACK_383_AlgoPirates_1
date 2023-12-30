@@ -11,7 +11,7 @@ import { IoIosLogOut } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 function Header({ OpenSidebar }) {
-  const style={width: '35px', height: '35px' };
+  const style={width: '35px', height: '35px', color: 'red'};
   return (
     <div className="header-dashboard">
       <div>

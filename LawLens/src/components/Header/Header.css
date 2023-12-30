@@ -2,6 +2,7 @@
   background-color: var(--primary-bg);
   color: var(--primary-text);
   padding: 1rem 0;
+  box-shadow: 3px 3px 10px rgb(151, 151, 151);
 }
 
 .link {
