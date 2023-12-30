@@ -31,7 +31,7 @@ const SignIn = () => {
 
         const json = await response.json();
         console.log(json);
-        history.push('./');
+        history.push('./dashboard');
       } else {
         console.log("nhi ho sakta bhai")
 
