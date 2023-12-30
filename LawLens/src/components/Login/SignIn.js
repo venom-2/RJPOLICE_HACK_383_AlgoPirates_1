@@ -14,7 +14,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      if (cred.usertype === 'admin') {
+      if (cred.usertype === 'user') {
         const response = await fetch("http://localhost:3001/api/auth/login", {
           method: 'POST',
           headers: {
@@ -31,10 +31,25 @@ const SignIn = () => {
 
         const json = await response.json();
         console.log(json);
-        history.push('./dashboard');
-      } else {
-        console.log("nhi ho sakta bhai")
+        history.push('./');
+      } else if (cred.usertype === 'admin')  {
+        const response = await fetch("http://localhost:3001/api/adminauth/login", {
+          method: 'POST',
+          headers: {
+            "Content-Type": 'application/json'
+          },
+          body: JSON.stringify({
+            email: cred.email,
+            password: cred.password,
+          })
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
+        const json = await response.json();
+        console.log(json);
+        history.push('./dashboard');
       }
 
 
