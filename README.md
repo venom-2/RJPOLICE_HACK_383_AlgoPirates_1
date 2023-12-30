@@ -1,3 +1,8 @@
+Note:
+- Open deployed link of this web app
+- Sign up with your credentials
+- For now, the user can only log in as an admin (so kindly select admin from dropdown in sign in page)
+
 # Law Lens
 
 Law Lens is an Online Platform that minimizes the gap between Police and Citizens by allowing citizens to
@@ -13,6 +18,8 @@ Law Lens is an Online Platform that minimizes the gap between Police and Citizen
 
 ### Overview
 
+![Screenshot 2023-12-30 200458](https://github.com/venom-2/RJPOLICE_HACK_383_AlgoPirates_1/assets/103876428/6dba94cd-77ec-4c3f-b0fd-be80b2ba8cd2)
+
 The front end of Law Lens is built using modern web technologies to provide an intuitive and user-friendly interface. It offers document search, case management, and interactive tools to enhance user-friendliness and transparency.
 
 ### Technologies Used
@@ -20,6 +27,9 @@ The front end of Law Lens is built using modern web technologies to provide an i
 - **React.js**: A JavaScript library for building user interfaces.
 - **React Router**: A routing library for React applications, enabling navigation between different components.
 - **BootStrap**: A framework for styling responsive and consistent user interfaces.
+
+![Screenshot 2023-12-30 200917](https://github.com/venom-2/RJPOLICE_HACK_383_AlgoPirates_1/assets/103876428/4ebdda9d-2cf9-4cd4-887c-47dbb6d0e35b)
+
 
 ### Getting Started
 
