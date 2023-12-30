@@ -62,6 +62,7 @@ router.post('/createUser', [
 
 });
 
+
 // Route-02 : For user Login
 router.post('/login', [
     body('email', ' Enter correct Email').isEmail(),

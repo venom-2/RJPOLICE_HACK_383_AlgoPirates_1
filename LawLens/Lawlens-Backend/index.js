@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/adminauth', require('./routes/adminAuth'))
 
 
 app.listen(port, () => {
