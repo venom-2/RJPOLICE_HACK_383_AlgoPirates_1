@@ -14,7 +14,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      if (cred.usertype === 'user') {
+      if (cred.usertype === 'admin') {
         const response = await fetch("http://localhost:3001/api/auth/login", {
           method: 'POST',
           headers: {
