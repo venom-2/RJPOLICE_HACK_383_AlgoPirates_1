@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive position-fixed": ""}>
         <div className='sidebar-title'>
-            <div className='sidebar-brand'>
+            <div className='sidebar-brand heading'>
                 LawLens-Admin Dashboard
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>

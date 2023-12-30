@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1d2634;
+  background-color: #f8f2d1;
   color: #9e9ea4;
   font-family: 'Montserrat', sans-serif;
 }
@@ -139,8 +139,15 @@ body {
 }
 
 .main-title {
+  color: #9e9ea4;
   display: flex;
   justify-content: space-between;
+  font-weight: bolder;
+}
+
+.heading {
+  color: #505050;
+  text-shadow: #000000 0px 3px 10px;
 }
 
 .main-cards {
