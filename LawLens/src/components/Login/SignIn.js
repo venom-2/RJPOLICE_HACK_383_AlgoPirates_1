@@ -56,6 +56,7 @@ const SignIn = () => {
         const json = await response.json();
         console.log(json);
         history.push('./userdashboard');
+        toast.success("Welcome User🙏");
       } else if (cred.usertype === 'admin' && validateEmail(cred.email))  {
         const response = await fetch("http://localhost:3001/api/adminauth/login", {
           method: 'POST',
@@ -74,7 +75,7 @@ const SignIn = () => {
         const json = await response.json();
         console.log(json);
         history.push('./dashboard');
-        toast.success("Login Successful")
+        toast.success("Welcome Admin");
       }
 
 
