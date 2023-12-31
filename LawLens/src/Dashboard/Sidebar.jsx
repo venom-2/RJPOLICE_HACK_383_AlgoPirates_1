@@ -7,30 +7,30 @@ import { Link } from 'react-router-dom'
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive position-fixed": ""}>
         <div className='sidebar-title'>
-            <div className='sidebar-brand'>
+            <div className='sidebar-brand heading'>
                 LawLens-Admin Dashboard
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
 
         <ul className='sidebar-list'>
-            <Link to="/dashboard">
+            <Link to="/dashboard" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsGrid1X2Fill className='icon'/> Dashboard
                     </a>
                 </li>
             </Link>
-            <Link to="/AddAdmin">
+            <Link to="/AddAdmin" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsPeopleFill className='icon'/>  Manage Admins
                     </a>
                 </li>
             </Link>
-            <Link to="/fir">
+            <Link to="/fir" style={{ textDecoration: 'none' }}>
 
             <li className='sidebar-list-item'>
                 <a href="">

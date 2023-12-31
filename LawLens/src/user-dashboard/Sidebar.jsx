@@ -16,7 +16,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
         </div>
 
         <ul className='sidebar-list'>
-            <Link to="/userdashboard">
+            <Link to="/userdashboard" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsGrid1X2Fill className='icon'/> Dashboard

@@ -17,10 +17,9 @@ const AddAdmin = () => {
         openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}
       />
-      <div className="d-fex w-100 box-sizing-border-box">
-        
+      <div className="w-100 justify-content-around" style={{ width: "76.5vw" }}>
         <form className="mx-4 my-3 flex-50%">
-          <h1>Manage Admin</h1>
+          <h1 className="heading">Manage Admin</h1>
           <div className="form-row">
             <div className="form-group col-md-6">
               <label for="inputEmail4">Username</label>
@@ -77,15 +76,16 @@ const AddAdmin = () => {
             </div>
           </div>
           <div className="form-group">
-            <div className="form-check">
-            </div>
+            <div className="form-check"></div>
           </div>
           <button type="submit" className="btn btn-primary">
             Add
           </button>
         </form>
-
-        <table className="table text-white flex-50%">
+        <table
+          className="table flex-50%"
+          style={{ width: "76.5vw" }}
+        >
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -112,11 +112,95 @@ const AddAdmin = () => {
               <td colspan="2">Larry the Bird</td>
               <td>@twitter</td>
             </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+
           </tbody>
         </table>
-
       </div>
-
     </div>
   );
 };

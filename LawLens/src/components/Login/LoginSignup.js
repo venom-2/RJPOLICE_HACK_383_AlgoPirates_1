@@ -7,13 +7,27 @@ import number from "../../assets/number.png"
 import dial from "../../assets/dial.png"
 import Header from "../Header/Header"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import {Icon} from 'react-icons-kit';
+import {eyeOff} from 'react-icons-kit/feather/eyeOff';
+import {eye} from 'react-icons-kit/feather/eye'
 
 
 export default function LoginSignup() {
 
   const history = useHistory();
+  const [cred, setCred] = useState({ username: "", email: "", password: "", adharno: "", mobileno: "" });
+  const [type, setType] = useState('password');
+  const [icon, setIcon] = useState(eyeOff);
 
-  const [cred, setCred] = useState({ username: "", email: "", password: "", adharno: "", mobileno: "" })
+  const handleToggle = () => {
+    if (type==='password'){
+       setIcon(eye);
+       setType('text')
+    } else {
+       setIcon(eyeOff)
+       setType('password')
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,7 +83,8 @@ export default function LoginSignup() {
         </div>
         <div className="input">
           <img src={padlock} alt="" />
-          <input type="password" name="password" value={cred.password} onChange={onchange} placeholder='Password' />
+          <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password'/>
+          <span  onClick={handleToggle} style={{color:'black'}}><Icon icon={icon} size={25}/></span>
         </div>
         {action === "Log In" ? <div></div> : <div className="input">
           <img src={number} alt="" />

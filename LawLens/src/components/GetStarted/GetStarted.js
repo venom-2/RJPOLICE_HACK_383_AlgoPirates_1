@@ -2,6 +2,7 @@ import React from "react";
 import "./GetStarted.css";
 import getStarted from "../../assets/getStarted.png";
 import { Container } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 export default function GetStarted() {
   return (
@@ -44,7 +45,9 @@ export default function GetStarted() {
             data-aos-duration="1000"
             easing="ease-in"
           >
-            <strong>Get Started</strong>
+            <Link to="/signup" style={{ textDecoration: 'none' }}>
+              <strong>Get Started</strong>
+            </Link>
           </button>
         </div>
       </Container>
