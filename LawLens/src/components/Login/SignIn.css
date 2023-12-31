@@ -13,3 +13,7 @@
     color: #0a0a0a;
     border: 2px solid #ffb613;
 }
+
+.input span{
+    margin-right: 1rem;
+}
