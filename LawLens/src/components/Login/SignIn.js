@@ -5,10 +5,25 @@ import mail from "../../assets/mail.png";
 import padlock from "../../assets/padlock.png";
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react';
+import {Icon} from 'react-icons-kit';
+import {eyeOff} from 'react-icons-kit/feather/eyeOff';
+import {eye} from 'react-icons-kit/feather/eye'
 
 const SignIn = () => {
   const history = useHistory();
-  const [cred, setCred] = useState({ email: "", password: "", usertype: "" })
+  const [cred, setCred] = useState({ email: "", password: "", usertype: "" });
+  const [type, setType] = useState('password');
+  const [icon, setIcon] = useState(eyeOff);
+
+  const handleToggle = () => {
+    if (type==='password'){
+       setIcon(eye);
+       setType('text')
+    } else {
+       setIcon(eyeOff)
+       setType('password')
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,7 +95,8 @@ const SignIn = () => {
           </div>
           <div className="input">
             <img src={padlock} alt="" />
-            <input type="password" name="password" value={cred.password} onChange={onchange} placeholder='Password' />
+            <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password' />
+            <span  onClick={handleToggle} style={{color:'black'}}><Icon icon={icon} size={25}/></span>
           </div>
           <div className='input'>
             <select name='usertype' value={cred.usertype} onChange={onchange} id='role'>
