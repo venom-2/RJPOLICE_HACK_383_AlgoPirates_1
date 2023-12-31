@@ -7,9 +7,9 @@ import number from "../../assets/number.png"
 import dial from "../../assets/dial.png"
 import Header from "../Header/Header"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import {Icon} from 'react-icons-kit';
-import {eyeOff} from 'react-icons-kit/feather/eyeOff';
-import {eye} from 'react-icons-kit/feather/eye'
+import { Icon } from 'react-icons-kit';
+import { eyeOff } from 'react-icons-kit/feather/eyeOff';
+import { eye } from 'react-icons-kit/feather/eye'
 
 
 export default function LoginSignup() {
@@ -19,13 +19,18 @@ export default function LoginSignup() {
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(String(email).toLowerCase());
+  };
+
   const handleToggle = () => {
-    if (type==='password'){
-       setIcon(eye);
-       setType('text')
+    if (type === 'password') {
+      setIcon(eye);
+      setType('text')
     } else {
-       setIcon(eyeOff)
-       setType('password')
+      setIcon(eyeOff)
+      setType('password')
     }
   };
 
@@ -33,28 +38,30 @@ export default function LoginSignup() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3001/api/auth/createuser", {
-        method: 'POST',
-        headers: {
-          "Content-Type": 'application/json'
-        },
-        body: JSON.stringify({
-          username: cred.username,
-          email: cred.email,
-          password: cred.password,
-          adharno: cred.adharno,
-          mobileno: cred.mobileno
-        })
-      });
+      if (validateEmail(cred.email)) {
+        const response = await fetch("http://localhost:3001/api/auth/createuser", {
+          method: 'POST',
+          headers: {
+            "Content-Type": 'application/json'
+          },
+          body: JSON.stringify({
+            username: cred.username,
+            email: cred.email,
+            password: cred.password,
+            adharno: cred.adharno,
+            mobileno: cred.mobileno
+          })
+        });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        console.log(json);
+        console.log("completed");
+        history.push('./signin')
       }
-
-      const json = await response.json();
-      console.log(json);
-      console.log("completed");
-      history.push('./signin')
     } catch (error) {
       console.error('Error during fetch:', error);
     }
@@ -83,8 +90,8 @@ export default function LoginSignup() {
         </div>
         <div className="input">
           <img src={padlock} alt="" />
-          <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password'/>
-          <span  onClick={handleToggle} style={{color:'black'}}><Icon icon={icon} size={25}/></span>
+          <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password' />
+          <span onClick={handleToggle} style={{ color: 'black' }}><Icon icon={icon} size={25} /></span>
         </div>
         {action === "Log In" ? <div></div> : <div className="input">
           <img src={number} alt="" />
