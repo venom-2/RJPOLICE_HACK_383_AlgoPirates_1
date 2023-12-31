@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye'
+import toast from "react-hot-toast";
 
 
 export default function LoginSignup() {
@@ -38,7 +39,11 @@ export default function LoginSignup() {
     e.preventDefault();
 
     try {
-      if (validateEmail(cred.email)) {
+      const adharLength = cred.adharno.toString().length;
+      const mobileLength = cred.mobileno.toString().length;
+      console.log(adharLength , mobileLength)
+      if(!validateEmail(cred.email) || adharLength != 12 || mobileLength != 10) toast.error("Use correct Credentials")
+      if (validateEmail(cred.email) && adharLength == 12 && mobileLength == 10) {
         const response = await fetch("http://localhost:3001/api/auth/createuser", {
           method: 'POST',
           headers: {
@@ -61,6 +66,7 @@ export default function LoginSignup() {
         console.log(json);
         console.log("completed");
         history.push('./signin')
+        toast.success("SignUp Completed")
       }
     } catch (error) {
       console.error('Error during fetch:', error);

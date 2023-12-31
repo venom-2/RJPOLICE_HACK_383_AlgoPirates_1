@@ -8,6 +8,7 @@ import { useState } from 'react';
 import {Icon} from 'react-icons-kit';
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import {eye} from 'react-icons-kit/feather/eye'
+import toast from 'react-hot-toast';
 
 const SignIn = () => {
   const history = useHistory();
@@ -35,7 +36,8 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      console.log("This is : "+ validateEmail(cred.email))
+
+      if(!validateEmail(cred.email)) toast.error("Use correct Credentials")
       if (cred.usertype === 'user' && validateEmail(cred.email)) {
         const response = await fetch("http://localhost:3001/api/auth/login", {
           method: 'POST',
@@ -72,6 +74,7 @@ const SignIn = () => {
         const json = await response.json();
         console.log(json);
         history.push('./dashboard');
+        toast.success("Login Successful")
       }
 
 
