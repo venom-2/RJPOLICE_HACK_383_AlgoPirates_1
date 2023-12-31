@@ -10,11 +10,18 @@ const SignIn = () => {
   const history = useHistory();
   const [cred, setCred] = useState({ email: "", password: "", usertype: "" })
 
+  
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      if (cred.usertype === 'user') {
+      console.log("This is : "+ validateEmail(cred.email))
+      if (cred.usertype === 'user' && validateEmail(cred.email)) {
         const response = await fetch("http://localhost:3001/api/auth/login", {
           method: 'POST',
           headers: {
@@ -32,7 +39,7 @@ const SignIn = () => {
         const json = await response.json();
         console.log(json);
         history.push('./userdashboard');
-      } else if (cred.usertype === 'admin')  {
+      } else if (cred.usertype === 'admin' && validateEmail(cred.email))  {
         const response = await fetch("http://localhost:3001/api/adminauth/login", {
           method: 'POST',
           headers: {
@@ -54,6 +61,7 @@ const SignIn = () => {
 
 
     } catch (error) {
+      console.log(error);
       console.error('Error during fetch:', error);
     }
   };
