@@ -8,6 +8,7 @@ import Dasboard from "./Dashboard/App";
 import AddAdmin from "./Dashboard/AddAdmin";
 import FIR from "./Dashboard/FIR";
 import userdashboard from "./user-dashboard/App";
+import useradmindashboard from "./useradmin-dashboard/App";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route exact path='/AddAdmin' component={AddAdmin} />
           <Route exact path='/fir' component={FIR} />
           <Route exact path='/userdashboard' component={userdashboard} />
+          <Route exact path='/useradmindashboard' component={useradmindashboard} />
+
         </Switch>
       </BrowserRouter>
     </div>

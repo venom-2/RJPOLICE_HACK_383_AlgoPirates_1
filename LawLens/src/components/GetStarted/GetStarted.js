@@ -3,6 +3,7 @@ import "./GetStarted.css";
 import getStarted from "../../assets/getStarted.png";
 import { Container } from "react-bootstrap";
 import {Link} from "react-router-dom";
+import thinkman from "../../assets/thinkman.png";
 
 export default function GetStarted() {
   return (
@@ -37,6 +38,15 @@ export default function GetStarted() {
           >
             Introducing our revolutionary Online FIR Facility, a seamless solution that transforms the way you report incidents and access law enforcement services.
           </p>
+          <div className="feedback">
+          <p className="iinfo">
+            Give us a Feedback on...<br/>
+            <a href="#" target="_blank">Insta</a>
+            <br/>
+            <a href="#" target="_blank">Fb</a>
+          </p>
+          <img src={thinkman} class="rounded float-right" id="image" alt="image" />
+          </div>
           <button
             className="getStartedBtn"
             data-aos="slide-up"

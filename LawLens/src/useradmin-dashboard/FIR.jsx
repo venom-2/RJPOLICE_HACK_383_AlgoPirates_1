@@ -16,18 +16,18 @@ const FIR = () => {
       <Header OpenSidebar={OpenSidebar}/>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
 
-      <table className="table table-bordered mx-3 text-black border-dark" style={{width: '76.5vw'}}>
+      <table className="table table-striped table-bordered mx-3 text-white" style={{width: '76.5vw'}}>
         <thead>
             <h1 className='text-center'>Active FIR List</h1>
         </thead>
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Statement</th>
-                <th>Branch</th>
+                <th>Position</th>
+                <th>Office</th>
                 <th>Age</th>
-                <th>Date</th>
-                <th>Time</th>
+                <th>Start date</th>
+                <th>Salary</th>
             </tr>
         </thead>
         <tbody>
