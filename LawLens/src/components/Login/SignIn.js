@@ -8,6 +8,7 @@ import { useState } from 'react';
 import {Icon} from 'react-icons-kit';
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import {eye} from 'react-icons-kit/feather/eye'
+import toast from 'react-hot-toast';
 
 const SignIn = () => {
   const history = useHistory();
@@ -25,11 +26,19 @@ const SignIn = () => {
     }
   };
 
+  
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      if (cred.usertype === 'user') {
+
+      if(!validateEmail(cred.email)) toast.error("Use correct Credentials")
+      if (cred.usertype === 'user' && validateEmail(cred.email)) {
         const response = await fetch("http://localhost:3001/api/auth/login", {
           method: 'POST',
           headers: {
@@ -47,7 +56,8 @@ const SignIn = () => {
         const json = await response.json();
         console.log(json);
         history.push('./userdashboard');
-      } else if (cred.usertype === 'admin')  {
+        toast.success("Welcome User🙏");
+      } else if (cred.usertype === 'admin' && validateEmail(cred.email))  {
         const response = await fetch("http://localhost:3001/api/adminauth/login", {
           method: 'POST',
           headers: {
@@ -65,10 +75,12 @@ const SignIn = () => {
         const json = await response.json();
         console.log(json);
         history.push('./dashboard');
+        toast.success("Welcome Admin");
       }
 
 
     } catch (error) {
+      console.log(error);
       console.error('Error during fetch:', error);
     }
   };
