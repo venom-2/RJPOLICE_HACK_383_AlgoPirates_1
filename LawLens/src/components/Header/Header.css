@@ -6,7 +6,7 @@
 }
 
 .link {
-  color: rgb(71, 71, 71);
+  color: rgb(0, 0, 0);
   margin: 0 1rem;
   font-size: 1.5rem;
   text-decoration: none;
@@ -37,6 +37,12 @@
 } */
 #responsive-navbar-nav .link:hover {
   color: rgb(0, 0, 0);
+}
+
+.link img{
+  height: 40px;
+  width: 250px;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

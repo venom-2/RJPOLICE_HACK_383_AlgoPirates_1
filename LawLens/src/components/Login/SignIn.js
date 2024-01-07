@@ -108,7 +108,7 @@ const SignIn = () => {
           <div className="input">
             <img src={padlock} alt="" />
             <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password' />
-            <span  onClick={handleToggle} style={{color:'black'}}><Icon icon={icon} size={25}/></span>
+            <span  className='eye' onClick={handleToggle} style={{color:'black'}}><Icon icon={icon} size={25}/></span>
           </div>
           <div className='input'>
             <select name='usertype' value={cred.usertype} onChange={onchange} id='role'>

@@ -1,6 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./Footer.css";
+import { Link } from "react-router-dom";
+
+const linkStyle = {
+  textDecoration: "none",
+  color: 'white',
+};
 
 export default function Footer() {
   return (
@@ -16,7 +22,9 @@ export default function Footer() {
           Pending Application?
         </h1>
         <button className="sendEmailBtn">
-        Track your application here
+        <Link to="/signup" style={linkStyle}>
+         Track your application here
+        </Link>
         </button>
       </Container>
     </footer>
