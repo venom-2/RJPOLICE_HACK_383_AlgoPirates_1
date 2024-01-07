@@ -14,6 +14,46 @@ const linkStyle2 = {
 };
 
 function FirformModal(props) {
+
+  const [cred, setCred] = useState({
+    firstname: "",
+    lastname: "",
+    city: "",
+    state: "",
+    adharno: "",
+    description: ""
+  })
+
+  const onchange = (e) => {
+    setCred({ ...cred, [e.target.name]: e.target.value });
+  }
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3001/api/fir/create', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          firstname: cred.firstname,
+          lastname: cred.lastname,
+          city: cred.city,
+          state: cred.state,
+          adharno: cred.adharno,
+          description: cred.description 
+        })
+      })
+      const res = await response.json();
+      console.log(res);
+      props.onHide();
+    } catch (error) {
+      console.error('Error during fetch:', error);
+    }
+
+  }
+
+
   return (
     <Modal {...props} size="lg" centered>
       <Modal.Header closeButton>
@@ -29,24 +69,24 @@ function FirformModal(props) {
             <div className='form-group'>
               <div>Name of Complainant:</div>
               <div className="loc">
-                <input type="text" className="form-control" id="name" name="name" placeholder='First Name' />
-                <input type="text" className="form-control" id="name" name="name" placeholder='Last Name' />
+                <input type="text" className="form-control" id="name" name="firstname" value={cred.firstname} onChange={onchange} placeholder='First Name' />
+                <input type="text" className="form-control" id="name" value={cred.lastname} onChange={onchange} name="lastname" placeholder='Last Name' />
               </div>
             </div>
             <div className='form-group'>
               <div>Location:</div>
               <div className="loc">
-                <input type="text" className="form-control" id="name" name="name" placeholder='City' />
-                <input type="text" className="form-control" id="name" name="name" placeholder='State' />
+                <input type="text" className="form-control" id="name" value={cred.city} name="city" onChange={onchange} placeholder='City' />
+                <input type="text" className="form-control" id="name" value={cred.state} name="state" onChange={onchange} placeholder='State' />
               </div>
             </div>
             <div className='form-group'>
               <div>Aadhar Number:</div>
-              <input type="tel" className="form-control" id="aadharno" name="aadharno" placeholder="Enter valid 12-digit Aadhar Number"/>
+              <input type="tel" className="form-control" value={cred.adharno} onChange={onchange} id="aadharno" name="adharno" placeholder="Enter valid 12-digit Aadhar Number" />
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea4">Write your Complaint:</label>
-              <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+              <textarea class="form-control" onChange={onchange} value={cred.description} name="description" id="exampleFormControlTextarea4" rows="3"></textarea>
             </div>
             <div>Upload your File:</div>
             <div className="input-group mb-3">
@@ -59,7 +99,7 @@ function FirformModal(props) {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={props.onHide} className="btn-warning">
+        <Button variant="secondary" onClick={handleSubmit} className="btn-warning">
           Submit
         </Button>
         {/* Add additional buttons/actions here if needed */}
