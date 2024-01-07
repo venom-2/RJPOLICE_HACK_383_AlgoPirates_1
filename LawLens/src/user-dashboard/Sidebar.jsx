@@ -4,13 +4,14 @@ import
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
  from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand'>
-                LawLens-User Dashboard
+                <img src = {logo} alt="logo"/>
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
@@ -23,21 +24,21 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                     </a>
                 </li>
             </Link>
-            {/* <Link to="/AddAdmin"> */}
+            <Link to="/AddAdmin">
                 <li className='sidebar-list-item'>
                     <a href="">
                         <BsPeopleFill className='icon'/>  Manage Admins
                     </a>
                 </li>
-            {/* </Link> */}
-            {/* <Link to="/fir"> */}
+            </Link>
+            <Link to="/fir">
 
             <li className='sidebar-list-item'>
                 <a href="">
                     <BsFillGrid3X3GapFill className='icon'/> Active FIR
                 </a>
             </li>
-            {/* </Link> */}
+            </Link>
 
             {/* <li className='sidebar-list-item'>
                 <a href="">

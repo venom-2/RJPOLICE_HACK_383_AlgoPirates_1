@@ -4,38 +4,33 @@ import
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
  from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive position-fixed": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand heading'>
-                LawLens-Admin Dashboard
+            <img src = {logo} alt="logo"/>
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
 
-        <ul className='sidebar-list'>
+        <ul className='sidebar-list text-dark' >
             <Link to="/dashboard" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
-                    <a href="">
                         <BsGrid1X2Fill className='icon'/> Dashboard
-                    </a>
                 </li>
             </Link>
             <Link to="/AddAdmin" style={{ textDecoration: 'none' }}>
                 <li className='sidebar-list-item'>
-                    <a href="">
                         <BsPeopleFill className='icon'/>  Manage Admins
-                    </a>
                 </li>
             </Link>
             <Link to="/fir" style={{ textDecoration: 'none' }}>
 
             <li className='sidebar-list-item'>
-                <a href="">
                     <BsFillGrid3X3GapFill className='icon'/> Active FIR
-                </a>
             </li>
             </Link>
 
@@ -45,9 +40,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li> */}
             <li className='sidebar-list-item'>
-                <a href="">
                     <BsFillGearFill className='icon'/> Setting
-                </a>
             </li>
         </ul>
     </aside>

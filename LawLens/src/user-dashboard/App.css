@@ -81,10 +81,10 @@ body {
   display: none;
 }
 
-.sidebar-brand {
-  margin-top: 15px;
-  font-size: 20px;
-  font-weight: 700;
+.sidebar-brand img {
+  height: 30px;
+  width: 200px;
+  margin-left: 0px;
 }
 
 .sidebar-list {
@@ -96,6 +96,7 @@ body {
 .sidebar-list-item {
   padding: 20px 20px 20px 20px;
   font-size: 18px;
+  color:#505050;
 }
 
 .sidebar-list link{
@@ -110,7 +111,6 @@ body {
 
 .sidebar-list-item > a {
   text-decoration: none;
-  color: #9e9ea4;
 }
 
 .sidebar-responsive {
@@ -138,6 +138,11 @@ body {
 .main-title {
   display: flex;
   justify-content: space-between;
+}
+
+.main-title h3{
+  font-weight: bold;
+  color:#505050;
 }
 
 .main-cards {

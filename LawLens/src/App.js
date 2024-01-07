@@ -8,7 +8,7 @@ import Dasboard from "./Dashboard/App";
 import AddAdmin from "./Dashboard/AddAdmin";
 import FIR from "./Dashboard/FIR";
 import userdashboard from "./user-dashboard/App";
-import useradmindashboard from "./useradmin-dashboard/App";
+import superadmindashboard from "./superadmin-dashboard/App";
 import {Toaster} from "react-hot-toast";
 
 function App() {
@@ -24,8 +24,7 @@ function App() {
           <Route exact path='/AddAdmin' component={AddAdmin} />
           <Route exact path='/fir' component={FIR} />
           <Route exact path='/userdashboard' component={userdashboard} />
-          <Route exact path='/useradmindashboard' component={useradmindashboard} />
-
+          <Route exact path='/superadmindashboard' component={superadmindashboard} />
         </Switch>
       </BrowserRouter>
     </div>
