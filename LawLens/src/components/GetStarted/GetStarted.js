@@ -41,7 +41,7 @@ function FirformModal(props) {
           city: cred.city,
           state: cred.state,
           adharno: cred.adharno,
-          description: cred.description 
+          description: cred.description
         })
       })
       const res = await response.json();

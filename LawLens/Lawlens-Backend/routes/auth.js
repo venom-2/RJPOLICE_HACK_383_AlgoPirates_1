@@ -76,8 +76,12 @@ router.post('/login', [
         res.send({ errors: result.array() });
     }
 
+    
     // De-structuring request
     const { email, password } = await req.body;
+    // if(req.param.id !== email) {
+    //     return res.status(400).json({ errors: "Please enter correct link galat h" });
+    // }
     try { 
 
         // finding user with entered Email

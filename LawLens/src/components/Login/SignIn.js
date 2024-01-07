@@ -39,7 +39,7 @@ const SignIn = () => {
 
       if(!validateEmail(cred.email)) toast.error("Use correct Credentials")
       if (cred.usertype === 'user' && validateEmail(cred.email)) {
-        const response = await fetch("http://localhost:3001/api/auth/login", {
+        const response = await fetch(`http://localhost:3001/api/auth/login`, {
           method: 'POST',
           headers: {
             "Content-Type": 'application/json'
@@ -55,10 +55,10 @@ const SignIn = () => {
 
         const json = await response.json();
         console.log(json);
-        history.push(`./userdashboard`);
+        history.push(`./userdashboard${json.authToken}`);
         toast.success("Welcome User🙏");
       } else if (cred.usertype === 'admin' && validateEmail(cred.email))  {
-        const response = await fetch("http://localhost:3001/api/adminauth/login", {
+        const response = await fetch(`http://localhost:3001/api/adminauth/login`, {
           method: 'POST',
           headers: {
             "Content-Type": 'application/json'
