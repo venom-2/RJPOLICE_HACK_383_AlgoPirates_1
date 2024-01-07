@@ -91,8 +91,23 @@ function FirformModal(props) {
             <div>Upload your File:</div>
             <div className="input-group mb-3">
               <div class="custom-file">
-                <input type="file" class="custom-file-input"  id="inputGroupFile02" />
-                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Click a photo of the incident and upload</label>
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="inputGroupFile02"
+                  onChange={(e) => {
+                    const fileName = e.target.files[0].name;
+                    const label = document.querySelector(".custom-file-label");
+                    label.textContent = fileName;
+                  }}
+                />
+                <label
+                  class="custom-file-label"
+                  for="inputGroupFile02"
+                  aria-describedby="inputGroupFileAddon02"
+                >
+                  Click a photo of the incident and upload
+                </label>
               </div>
             </div>
           </form>
