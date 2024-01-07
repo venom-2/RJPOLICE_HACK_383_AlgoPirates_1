@@ -8,10 +8,12 @@ import Dasboard from "./Dashboard/App";
 import AddAdmin from "./Dashboard/AddAdmin";
 import FIR from "./Dashboard/FIR";
 import userdashboard from "./user-dashboard/App";
+import {Toaster} from "react-hot-toast";
 
 function App() {
   return (
     <div className="App">
+      <Toaster></Toaster>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
