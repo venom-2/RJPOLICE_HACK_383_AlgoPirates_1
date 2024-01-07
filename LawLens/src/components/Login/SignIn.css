@@ -17,3 +17,7 @@
 .input span{
     margin-right: 1rem;
 }
+
+.eye:hover{
+    cursor: pointer;
+}

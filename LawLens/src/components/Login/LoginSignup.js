@@ -96,8 +96,8 @@ export default function LoginSignup() {
         </div>
         <div className="input">
           <img src={padlock} alt="" />
-          <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password' />
-          <span onClick={handleToggle} style={{ color: 'black' }}><Icon icon={icon} size={25} /></span>
+          <input type={type} name="password" value={cred.password} onChange={onchange} placeholder='Password' autoComplete='current-password'/>
+          <span  className='eye' onClick={handleToggle} style={{color:'black'}}><Icon icon={icon} size={25}/></span>
         </div>
         {action === "Log In" ? <div></div> : <div className="input">
           <img src={number} alt="" />
