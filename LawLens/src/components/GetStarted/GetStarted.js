@@ -21,7 +21,7 @@ function FirformModal(props) {
     city: "",
     state: "",
     adharno: "",
-    description: ""
+    description: "",
   })
 
   const onchange = (e) => {
@@ -91,7 +91,7 @@ function FirformModal(props) {
             <div>Upload your File:</div>
             <div className="input-group mb-3">
               <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                <input type="file" class="custom-file-input"  id="inputGroupFile02" />
                 <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Click a photo of the incident and upload</label>
               </div>
             </div>

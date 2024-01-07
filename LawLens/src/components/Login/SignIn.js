@@ -50,12 +50,12 @@ const SignIn = () => {
           })
         });
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error! Status: ${response.status}`); 
         }
 
         const json = await response.json();
         console.log(json);
-        history.push('./userdashboard');
+        history.push(`./userdashboard`);
         toast.success("Welcome User🙏");
       } else if (cred.usertype === 'admin' && validateEmail(cred.email))  {
         const response = await fetch("http://localhost:3001/api/adminauth/login", {

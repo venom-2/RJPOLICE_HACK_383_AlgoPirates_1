@@ -15,7 +15,6 @@ router.post('/create', [
     body('adminname', 'Enter a Valid Username').isLength({ min: 3 }),
     body('email', ' Enter correct Email').isEmail(),
     body('password', 'Password must be 8 character long').isLength({ min: 8 }),
-    body('mobileno', 'Enter a valid mobile number').isMobilePhone(),
 
 ], async (req, res) => {
 
@@ -42,8 +41,13 @@ router.post('/create', [
         admin = await Admin.create({
             adminname: req.body.adminname,
             email: req.body.email, 
-            password: hashedPass, 
-            mobileno: req.body.mobileno
+            password: hashedPass,
+            address1 : req.body.address1,
+            address2 : req.body.address2,
+            state : req.body.state,
+            city : req.body.city,
+            zip : req.body.zip
+
         })
 
         const Data = {
@@ -104,6 +108,7 @@ router.post('/login', [
         res.status(500).send("Something went Wrong!");
     }
 })
+
 
 
 module.exports = router;
