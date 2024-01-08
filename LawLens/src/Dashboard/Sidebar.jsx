@@ -5,12 +5,12 @@ import
  from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
-function Sidebar({openSidebarToggle, OpenSidebar}) {
+function Sidebar({openSidebarToggle, OpenSidebar , name}) {
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive position-fixed": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand heading'>
-                LawLens-Admin Dashboard
+                {name}'s Dashboard
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>

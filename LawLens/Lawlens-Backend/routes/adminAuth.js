@@ -15,7 +15,6 @@ router.post('/create', [
     body('adminname', 'Enter a Valid Username').isLength({ min: 3 }),
     body('email', ' Enter correct Email').isEmail(),
     body('password', 'Password must be 8 character long').isLength({ min: 8 }),
-    body('mobileno', 'Enter a valid mobile number').isMobilePhone(),
 
 ], async (req, res) => {
 
@@ -42,8 +41,13 @@ router.post('/create', [
         admin = await Admin.create({
             adminname: req.body.adminname,
             email: req.body.email, 
-            password: hashedPass, 
-            mobileno: req.body.mobileno
+            password: hashedPass,
+            address1 : req.body.address1,
+            address2 : req.body.address2,
+            state : req.body.state,
+            city : req.body.city,
+            zip : req.body.zip
+
         })
 
         const Data = {
@@ -52,7 +56,7 @@ router.post('/create', [
 
         // Forming JWT auth. token for user
         const authToken = jwt.sign(Data, JWT_SECRET);
-        res.json({ authToken });
+        res.json({ authToken});
 
     } catch (error) {
         console.error(error);
@@ -97,13 +101,14 @@ router.post('/login', [
             id: admin.id
         }
         const authToken = jwt.sign(Data, JWT_SECRET);
-        res.json({ authToken });
+        res.json({ authToken: authToken, name : admin.adminname });
 
     } catch (error) {
         console.error("Login Error:", error);
         res.status(500).send("Something went Wrong!");
     }
 })
+
 
 
 module.exports = router;
