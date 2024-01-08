@@ -81,6 +81,11 @@ body {
   display: none;
 }
 
+.sidebar-brand{
+  font-weight: bolder;
+  color: #505050;
+}
+
 .sidebar-brand img {
   height: 30px;
   width: 200px;

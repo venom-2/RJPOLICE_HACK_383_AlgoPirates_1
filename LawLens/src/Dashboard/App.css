@@ -91,6 +91,10 @@ body {
   font-weight: 700;
 }
 
+.sidebar-brand img{
+  margin-top: 14.5rem;
+}
+
 .sidebar-list {
   padding: 0;
   list-style-type: none;

@@ -10,17 +10,20 @@ import {
   BsFillGearFill,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
-// import logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 
-function Sidebar({openSidebarToggle, OpenSidebar, name}) {
+function Sidebar({ openSidebarToggle, OpenSidebar, name }) {
   return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-        <div className='sidebar-title'>
-            <div className='sidebar-brand'>
-                {name}'s Dashboard
-            </div>
-            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
-        </div>
+    <aside
+      id="sidebar"
+      className={openSidebarToggle ? "sidebar-responsive" : ""}
+    >
+      <div className="sidebar-title">
+        <div className="sidebar-brand">{name}'s Dashboard</div>
+        <span className="icon close_icon" onClick={OpenSidebar}>
+          X
+        </span>
+      </div>
 
       <ul className="sidebar-list">
         <Link to="/userdashboard" style={{ textDecoration: "none" }}>
@@ -28,12 +31,12 @@ function Sidebar({openSidebarToggle, OpenSidebar, name}) {
             <BsGrid1X2Fill className="icon" /> Dashboard
           </li>
         </Link>
-        <Link to="/AddAdmin">
+        <Link to="/AddAdmin" style={{ textDecoration: "none" }}>
           <li className="sidebar-list-item">
             <BsPeopleFill className="icon" /> Manage Admins
           </li>
         </Link>
-        <Link to="/fir">
+        <Link to="/fir" style={{ textDecoration: "none" }}>
           <li className="sidebar-list-item">
             <BsFillGrid3X3GapFill className="icon" /> Active FIR
           </li>
@@ -46,6 +49,11 @@ function Sidebar({openSidebarToggle, OpenSidebar, name}) {
           <BsFillGearFill className="icon" /> Setting
         </li>
       </ul>
+      <div className="sidebar-title">
+        <div className="sidebar-brand">
+          <img src={logo} alt="logo" />
+        </div>
+      </div>
     </aside>
   );
 }

@@ -12,16 +12,14 @@ import {
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-function Sidebar({ openSidebarToggle, OpenSidebar }) {
+function Sidebar({ openSidebarToggle, OpenSidebar, name }) {
   return (
     <aside
       id="sidebar"
       className={openSidebarToggle ? "sidebar-responsive" : ""}
     >
       <div className="sidebar-title">
-        <div className="sidebar-brand heading">
-          <img src={logo} alt="logo" />
-        </div>
+        <div className="sidebar-brand heading">{name}'s Dashboard</div>
         <span className="icon close_icon" onClick={OpenSidebar}>
           X
         </span>
@@ -33,16 +31,15 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsGrid1X2Fill className="icon" /> Dashboard
           </li>
         </Link>
-        <Link to="/AddAdmin">
-        <li className="sidebar-list-item">
-          <BsPeopleFill className="icon" /> Manage Admins
-        </li>
+        <Link to="/AddAdmin" style={{ textDecoration: "none" }}>
+          <li className="sidebar-list-item">
+            <BsPeopleFill className="icon" /> Manage Admins
+          </li>
         </Link>
-        <Link to="/fir">
-
-        <li className="sidebar-list-item">
-          <BsFillGrid3X3GapFill className="icon" /> Active FIR
-        </li>
+        <Link to="/fir" style={{ textDecoration: "none" }}>
+          <li className="sidebar-list-item">
+            <BsFillGrid3X3GapFill className="icon" /> Active FIR
+          </li>
         </Link>
 
         {/* <li className='sidebar-list-item'>
@@ -52,6 +49,11 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           <BsFillGearFill className="icon" /> Setting
         </li>
       </ul>
+      <div className="sidebar-title">
+        <div className="sidebar-brand">
+          <img src={logo} alt="logo" />
+        </div>
+      </div>
     </aside>
   );
 }
