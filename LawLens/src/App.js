@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/dashboard" component={Dasboard} />
           <Route exact path='/AddAdmin' component={AddAdmin} />
           <Route exact path='/fir' component={FIR} />
-          <Route exact path='/userdashboard:id' component={userdashboard} />
+          <Route exact path='/userdashboard' component={userdashboard} />
         </Switch>
       </BrowserRouter>
     </div>
