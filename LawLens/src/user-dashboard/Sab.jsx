@@ -4,7 +4,7 @@ import Header from './Header'
 import Sidebar from './Sidebar'
 import Home from './Home'
 import { useState } from 'react'
-const Sab = () => {
+const Sab = (props) => {
 
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
@@ -14,7 +14,7 @@ const Sab = () => {
   return (
     <div className='grid-container'>
       <Header OpenSidebar={OpenSidebar}/>
-      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} name={props.name}/>
       <Home />
     </div>
   )

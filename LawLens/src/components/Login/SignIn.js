@@ -39,7 +39,7 @@ const SignIn = () => {
 
       if(!validateEmail(cred.email)) toast.error("Use correct Credentials")
       if (cred.usertype === 'user' && validateEmail(cred.email)) {
-        const response = await fetch("http://localhost:3001/api/auth/login", {
+        const response = await fetch(`http://localhost:3001/api/auth/login`, {
           method: 'POST',
           headers: {
             "Content-Type": 'application/json'
@@ -50,15 +50,19 @@ const SignIn = () => {
           })
         });
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error! Status: ${response.status}`); 
         }
 
         const json = await response.json();
         console.log(json);
-        history.push('./userdashboard');
-        toast.success("Welcome User🙏");
+        history.push(`./userdashboard`,{
+          state : {
+            name : json.name
+          }
+        });
+        toast.success(`Welcome ${json.name}🙏`);
       } else if (cred.usertype === 'admin' && validateEmail(cred.email))  {
-        const response = await fetch("http://localhost:3001/api/adminauth/login", {
+        const response = await fetch(`http://localhost:3001/api/adminauth/login`, {
           method: 'POST',
           headers: {
             "Content-Type": 'application/json'
@@ -74,8 +78,12 @@ const SignIn = () => {
 
         const json = await response.json();
         console.log(json);
-        history.push('./dashboard');
-        toast.success("Welcome Admin");
+        history.push('./dashboard', {
+          state : {
+            name : json.name
+          }
+        });
+        toast.success(`Welcome ${json.name}`);
       }
 
 

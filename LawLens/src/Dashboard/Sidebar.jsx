@@ -12,20 +12,15 @@ import {
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-function Sidebar({ openSidebarToggle, OpenSidebar }) {
+function Sidebar({openSidebarToggle, OpenSidebar , name}) {
   return (
-    <aside
-      id="sidebar"
-      className={openSidebarToggle ? "sidebar-responsive position-fixed" : ""}
-    >
-      <div className="sidebar-title">
-        <div className="sidebar-brand heading">
-          <img src={logo} alt="logo" />
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive position-fixed": ""}>
+        <div className='sidebar-title'>
+            <div className='sidebar-brand heading'>
+                {name}'s Dashboard
+            </div>
+            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
-        <span className="icon close_icon" onClick={OpenSidebar}>
-          X
-        </span>
-      </div>
 
       <ul className="sidebar-list text-dark">
         <Link to="/dashboard" style={{ textDecoration: "none" }}>

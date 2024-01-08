@@ -21,7 +21,7 @@ function FirformModal(props) {
     city: "",
     state: "",
     adharno: "",
-    description: ""
+    description: "",
   })
 
   const onchange = (e) => {
@@ -41,7 +41,7 @@ function FirformModal(props) {
           city: cred.city,
           state: cred.state,
           adharno: cred.adharno,
-          description: cred.description 
+          description: cred.description
         })
       })
       const res = await response.json();

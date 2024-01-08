@@ -169,8 +169,12 @@ body {
   justify-content: space-around;
   padding: 8px 15px;
   border-radius: 5px;
+  transition: all 250ms;
 }
-
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
 .card:first-child {
   background-color: #2962ff;
 }
