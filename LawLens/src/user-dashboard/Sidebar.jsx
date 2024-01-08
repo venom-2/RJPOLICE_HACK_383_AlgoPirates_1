@@ -1,58 +1,58 @@
-import React from 'react'
-import 
-{BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
-  BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
- from 'react-icons/bs'
-import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png'
+import React from "react";
+import {
+  BsCart3,
+  BsGrid1X2Fill,
+  BsFillArchiveFill,
+  BsFillGrid3X3GapFill,
+  BsPeopleFill,
+  BsListCheck,
+  BsMenuButtonWideFill,
+  BsFillGearFill,
+} from "react-icons/bs";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
-function Sidebar({openSidebarToggle, OpenSidebar}) {
+function Sidebar({ openSidebarToggle, OpenSidebar }) {
   return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-        <div className='sidebar-title'>
-            <div className='sidebar-brand'>
-                <img src = {logo} alt="logo"/>
-            </div>
-            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
+    <aside
+      id="sidebar"
+      className={openSidebarToggle ? "sidebar-responsive" : ""}
+    >
+      <div className="sidebar-title">
+        <div className="sidebar-brand">
+          <img src={logo} alt="logo" />
         </div>
+        <span className="icon close_icon" onClick={OpenSidebar}>
+          X
+        </span>
+      </div>
 
-        <ul className='sidebar-list'>
-            <Link to="/userdashboard" style={{ textDecoration: 'none' }}>
-                <li className='sidebar-list-item'>
-                    <a href="">
-                        <BsGrid1X2Fill className='icon'/> Dashboard
-                    </a>
-                </li>
-            </Link>
-            <Link to="/AddAdmin">
-                <li className='sidebar-list-item'>
-                    <a href="">
-                        <BsPeopleFill className='icon'/>  Manage Admins
-                    </a>
-                </li>
-            </Link>
-            <Link to="/fir">
+      <ul className="sidebar-list">
+        <Link to="/userdashboard" style={{ textDecoration: "none" }}>
+          <li className="sidebar-list-item">
+            <BsGrid1X2Fill className="icon" /> Dashboard
+          </li>
+        </Link>
+        <Link to="/AddAdmin">
+          <li className="sidebar-list-item">
+            <BsPeopleFill className="icon" /> Manage Admins
+          </li>
+        </Link>
+        <Link to="/fir">
+          <li className="sidebar-list-item">
+            <BsFillGrid3X3GapFill className="icon" /> Active FIR
+          </li>
+        </Link>
 
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillGrid3X3GapFill className='icon'/> Active FIR
-                </a>
-            </li>
-            </Link>
-
-            {/* <li className='sidebar-list-item'>
-                <a href="">
+        {/* <li className='sidebar-list-item'>
                     <BsPeopleFill className='icon'/> Customers
-                </a>
             </li> */}
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillGearFill className='icon'/> Setting
-                </a>
-            </li>
-        </ul>
+        <li className="sidebar-list-item">
+          <BsFillGearFill className="icon" /> Setting
+        </li>
+      </ul>
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

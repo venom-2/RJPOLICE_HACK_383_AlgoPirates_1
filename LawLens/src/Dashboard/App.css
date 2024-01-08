@@ -80,7 +80,7 @@ body {
   padding: 15px 30px 0px 30px;
   margin-bottom: 30px;
 }
-
+ 
 .sidebar-title > span {
   display: none;
 }
@@ -149,6 +149,11 @@ body {
 .heading {
   color: #505050;
   text-shadow: #000000 0px 3px 10px;
+}
+
+.main-title h3{
+  font-weight: bold;
+  color:#505050;
 }
 
 .main-cards {

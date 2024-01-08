@@ -57,7 +57,7 @@ function Home() {
   return (
     <main className='main-container'>
         <div className='main-title'>
-            <h3>USER DASHBOARD</h3>
+            <h3 className='heading'>USER DASHBOARD</h3>
         </div>
 
         <div className='main-cards'>

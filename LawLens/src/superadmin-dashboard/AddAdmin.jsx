@@ -19,8 +19,8 @@ const AddAdmin = () => {
       />
       <div className="d-fex w-100 box-sizing-border-box">
         
-        <form className="mx-4 my-3 flex-50%">
-          <h1>Manage Admin</h1>
+      <form className="mx-4 my-3 flex-50%">
+          <h1 className="heading">Manage Admin</h1>
           <div className="form-row">
             <div className="form-group col-md-6">
               <label for="inputEmail4">Username</label>
@@ -32,13 +32,33 @@ const AddAdmin = () => {
               />
             </div>
             <div className="form-group col-md-6">
-              <label for="inputPassword4">Password</label>
+              <label for="inputPassword4">E-mail</label>
               <input
-                type="password"
+                type="email"
                 className="form-control"
                 id="inputPassword4"
-                placeholder="Password"
+                placeholder="E-Mail"
               />
+            </div>
+          </div>
+          <div className="form-row">
+              <div className="form-group col-md-6">
+                <label for="inputAddress5">Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="inputAddress5"
+                  placeholder="Password"
+                />
+              </div>
+              <div className="form-group col-md-6">
+                <label for="inputAddress6">Confirm Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="inputAddress6"
+                  placeholder="Confirm Password"
+                />
             </div>
           </div>
           <div className="form-group">
@@ -77,13 +97,13 @@ const AddAdmin = () => {
             </div>
           </div>
           <div className="form-group">
-            <div className="form-check">
-            </div>
+            <div className="form-check"></div>
           </div>
           <button type="submit" className="btn btn-primary">
             Add
           </button>
         </form>
+
 
         <table className="table text-white flex-50%">
           <thead>

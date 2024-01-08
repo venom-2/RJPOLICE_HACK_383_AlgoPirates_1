@@ -7,7 +7,7 @@
 
 #getStarted .title {
   font-size: clamp(3rem, 5vw, 4rem);
-  width: 55%;
+  width: 90%;
   font-weight: bold;
 }
 
@@ -21,7 +21,7 @@
 
 #getStarted .info {
   font-size: clamp(1.5rem, 5vw, 2rem);
-  width: 50%;
+  width: 80%;
   margin: 2rem 0;
 }
 
@@ -68,15 +68,81 @@
   background-color: #ffb613;
   transition: 0.3s ease all;
   margin-top: 2rem;
+  width: 25rem;
+  color: black;
 }
 
 #getStarted .getStartedBtn:hover {
-  background-color: #f1a500;
+  background-color: #c7911b;
 }
 
 #getStarted .allText {
   z-index: 2;
+  width: 70rem;
 }
+
+.note{
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.image{
+  display: flex;
+  margin: 0;
+}
+
+.image img{
+  height: 500px;
+  width: 500px;
+  filter : drop-shadow(0px 3px 10px black);
+  cursor: pointer;
+}
+
+.containers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.intro{
+  position: absolute;
+  top: 10%;
+  left: 85%;
+}
+
+.intro img{
+  display: none;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  transform: translate(-50%,-50%);
+  filter : drop-shadow(0px 3px 10px black);
+}
+
+.image img:hover + .intro img{
+  display: block;
+}
+
+/* modal css start*/
+
+#contained-modal-title-vcenter{
+  color: black;
+  font-weight: medium;
+}
+
+#name{
+  margin-right: 1rem;
+}
+
+.loc{
+  display: flex;
+}
+
+/* modal css end*/
+
+/* media query */
 
 @media only screen and (max-width: 900px) {
   #getStarted {
@@ -96,5 +162,11 @@
   #getStarted .getStartedBtn {
     padding: 1rem 2.5rem;
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .man{
+    display: none;
   }
 }

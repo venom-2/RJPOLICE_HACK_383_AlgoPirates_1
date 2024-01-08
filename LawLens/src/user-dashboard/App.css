@@ -111,6 +111,7 @@ body {
 
 .sidebar-list-item > a {
   text-decoration: none;
+  color: #9e9ea4;
 }
 
 .sidebar-responsive {
@@ -136,8 +137,15 @@ body {
 }
 
 .main-title {
+  color: #9e9ea4;
   display: flex;
   justify-content: space-between;
+  font-weight: bolder;
+}
+
+.heading {
+  color: #505050;
+  text-shadow: #000000 0px 3px 10px;
 }
 
 .main-title h3{
