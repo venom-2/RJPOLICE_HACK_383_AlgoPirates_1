@@ -56,7 +56,7 @@ router.post('/create', [
 
         // Forming JWT auth. token for user
         const authToken = jwt.sign(Data, JWT_SECRET);
-        res.json({ authToken });
+        res.json({ authToken});
 
     } catch (error) {
         console.error(error);
@@ -101,7 +101,7 @@ router.post('/login', [
             id: admin.id
         }
         const authToken = jwt.sign(Data, JWT_SECRET);
-        res.json({ authToken });
+        res.json({ authToken: authToken, name : admin.adminname });
 
     } catch (error) {
         console.error("Login Error:", error);

@@ -74,8 +74,12 @@ const SignIn = () => {
 
         const json = await response.json();
         console.log(json);
-        history.push('./dashboard');
-        toast.success("Welcome Admin");
+        history.push('./dashboard', {
+          state : {
+            name : json.name
+          }
+        });
+        toast.success(`Welcome ${json.name}`);
       }
 
 
