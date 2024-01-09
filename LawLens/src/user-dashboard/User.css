@@ -211,6 +211,31 @@ body {
 /* End Main  */
 
 
+/* Appointment */
+
+.inner-container{
+  display: flex;
+  height: 45vh;
+  width: 72rem;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.card img{
+  height: 80%;
+  width: 100%;
+  margin: 0px;
+}
+
+.card p{
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+}
+
+
 /* Medium <= 992px */
   
 @media screen and (max-width: 992px) {
@@ -256,3 +281,5 @@ body {
     display: none;
   }
 }
+
+

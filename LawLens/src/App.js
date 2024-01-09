@@ -10,6 +10,8 @@ import FIR from "./Dashboard/FIR";
 import userdashboard from "./user-dashboard/App";
 import superadmindashboard from "./superadmin-dashboard/App";
 import {Toaster} from "react-hot-toast";
+import Appointment from "./user-dashboard/Appointment";
+import Myfir from "./user-dashboard/MYFIR";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route exact path='/fir' component={FIR} />
           <Route exact path='/userdashboard' component={userdashboard} />
           <Route exact path='/superadmindashboard' component={superadmindashboard} />
+          <Route exact path='/Appointment' component={Appointment} />
+          <Route exact path='/Myfir' component={Myfir} />
         </Switch>
       </BrowserRouter>
     </div>

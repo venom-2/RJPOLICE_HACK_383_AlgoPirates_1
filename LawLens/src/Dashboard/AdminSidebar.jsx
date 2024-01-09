@@ -12,28 +12,28 @@ import {
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-function Sidebar({ openSidebarToggle, OpenSidebar, name }) {
+function AdminSidebar({ openSidebarToggle, OpenSidebar, name }) {
   return (
     <aside
       id="sidebar"
-      className={openSidebarToggle ? "sidebar-responsive" : ""}
+      className={openSidebarToggle ? "sidebar-responsive position-fixed" : ""}
     >
       <div className="sidebar-title">
-        <div className="sidebar-brand">{name}'s Dashboard</div>
+        <div className="sidebar-brand heading">{name}'s Dashboard</div>
         <span className="icon close_icon" onClick={OpenSidebar}>
           X
         </span>
       </div>
 
-      <ul className="sidebar-list">
-        <Link to="/userdashboard" style={{ textDecoration: "none" }}>
+      <ul className="sidebar-list text-dark">
+        <Link to="/dashboard" style={{ textDecoration: "none" }}>
           <li className="sidebar-list-item">
             <BsGrid1X2Fill className="icon" /> Dashboard
           </li>
         </Link>
         <Link to="/AddAdmin" style={{ textDecoration: "none" }}>
           <li className="sidebar-list-item">
-            <BsPeopleFill className="icon" /> Manage Admins
+            <BsPeopleFill className="icon" /> Manage logo
           </li>
         </Link>
         <Link to="/fir" style={{ textDecoration: "none" }}>
@@ -58,4 +58,4 @@ function Sidebar({ openSidebarToggle, OpenSidebar, name }) {
   );
 }
 
-export default Sidebar;
+export default AdminSidebar;

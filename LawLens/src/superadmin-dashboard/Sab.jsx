@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Header from './Header'
-import Sidebar from './Sidebar'
+import Sidebar from './SuperSidebar'
 import Home from './Home'
 import { useState } from 'react'
 const Sab = () => {

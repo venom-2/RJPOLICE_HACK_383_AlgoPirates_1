@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Sidebar from "./AdminSidebar";
 import { useState } from "react";
 
 const AddAdmin = () => {

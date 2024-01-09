@@ -6,7 +6,7 @@ import {
   BsSearch,
   BsJustify,
 } from "react-icons/bs";
-import "./App.css";
+import "./User.css";
 import { IoIosLogOut } from "react-icons/io";
 import { Link } from "react-router-dom";
 
