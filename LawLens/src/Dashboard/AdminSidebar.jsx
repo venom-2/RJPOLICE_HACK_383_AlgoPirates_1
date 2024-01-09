@@ -10,7 +10,7 @@ import {
   BsFillGearFill,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/Law Lens-logos_blac.png";
 
 function AdminSidebar({ openSidebarToggle, OpenSidebar, name }) {
   return (
