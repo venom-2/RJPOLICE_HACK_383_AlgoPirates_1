@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import Chatbot from "../../components/chatbot/chatbot";
 
 const linkStyle = {
   textDecoration: "none",
@@ -27,6 +28,7 @@ export default function Footer() {
         </Link>
         </button>
       </Container>
+      <Chatbot/>
     </footer>
   );
 }
