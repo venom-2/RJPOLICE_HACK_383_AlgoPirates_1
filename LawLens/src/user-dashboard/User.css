@@ -219,7 +219,7 @@ body {
   width: 72rem;
   justify-content: space-between;
   padding-left: 5rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
 
@@ -227,12 +227,26 @@ body {
   height: 80%;
   width: 100%;
   margin: 0px;
+  transition: all 250ms;
+  margin-top: 5px;
+  
+}
+
+.card img:hover{
+  transform: scale(1.01);
+}
+
+.card{
+  width: 20rem;
+  height: 18rem;
 }
 
 .card p{
   text-align: center;
-  color: black;
-  font-weight: bolder;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 10px;
+
 }
 
 
