@@ -57,7 +57,7 @@ function Home() {
   return (
     <main className='main-container'>
         <div className='main-title'>
-            <h3 className='heading'>ADMIN DASHBOARD</h3>
+            <h3 className='heading'>SUPER-ADMIN DASHBOARD</h3>
         </div>
 
         <div className='main-cards'>

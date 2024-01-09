@@ -158,6 +158,8 @@ export default function GetStarted() {
           >
             Introducing our revolutionary Online FIR Facility, a seamless solution that transforms the way you report incidents and access law enforcement services.
           </p>
+          <div className="feedback">
+          </div>
           <button
             className="getStartedBtn"
             data-aos="slide-up"

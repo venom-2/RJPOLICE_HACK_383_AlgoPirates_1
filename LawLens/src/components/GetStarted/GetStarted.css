@@ -25,6 +25,41 @@
   margin: 2rem 0;
 }
 
+#getStarted .feedback{
+  width: fit-content;
+  height: fit-content;
+  float : right;
+  margin-top: -20rem;
+}
+
+#getStarted .iinfo{
+  font-size: medium;
+  float: right;
+}
+
+#getStarted #image{
+  width: 27em;
+  height: 27em;
+  background: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  #getStarted #image{
+    display: none;
+  }
+  #getStarted .iinfo {
+    display: none;
+  }
+}
+
+#getStarted .startedImg {
+  position: absolute;
+  right: 3rem;
+  bottom: -13rem;
+  z-index: -1;
+  width: 50%;
+}
+
 #getStarted .getStartedBtn {
   padding: 1.2rem 3rem;
   font-size: 1.6rem;
