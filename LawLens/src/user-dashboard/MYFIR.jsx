@@ -11,14 +11,14 @@ const Myfir = () => {
   };
 
   return (
-    <div className="grid-container">
+    <div className="grid-container" style={{width: "100vw"}}>
       <Header OpenSidebar={OpenSidebar} />
       <Sidebar
         openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}
       />
-      <div className="flex-column" style={{width: "50vw"}}>
-        <div className="flex-row mx-3" style={{width: "75.6vw"}}>
+      <div className="flex-column" style={{width: "80vw"}}>
+        <div className="flex-row mx-3" style={{width: "80vw", paddingLeft: "6vw"}}>
           <button
             className="generate-btn btn-primary mx-3"
             style={{
@@ -27,6 +27,7 @@ const Myfir = () => {
               marginTop: "5vh",
               marginBottom: "5vh",
               marginLeft: "5vw",
+              borderRadius: "10px",
             }}
           >
             {" "}
@@ -39,13 +40,14 @@ const Myfir = () => {
               height: "5vh",
               marginTop: "5vh",
               marginBottom: "5vh",
+              borderRadius: "10px",
             }}
           >
             {" "}
             Feedback{" "}
           </button>
         </div>
-        <table
+        {/* <table
           className="table table-bordered mx-3 text-black"
           style={{ width: "75.6vw" }}
         >
@@ -106,7 +108,7 @@ const Myfir = () => {
               <th>Salary</th>
             </tr>
           </tfoot>
-        </table>
+        </table> */}
       </div>
     </div>
   );
