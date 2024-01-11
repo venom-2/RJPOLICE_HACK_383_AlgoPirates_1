@@ -17,7 +17,7 @@ const Myfir = () => {
         openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}
       />
-      <div className="flex-column" style={{width: "100vw"}}>
+      <div className="flex-column" style={{width: "50vw"}}>
         <div className="flex-row mx-3" style={{width: "75.6vw"}}>
           <button
             className="generate-btn btn-primary mx-3"

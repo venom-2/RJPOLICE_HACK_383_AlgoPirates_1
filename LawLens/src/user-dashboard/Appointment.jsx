@@ -26,7 +26,7 @@ const Appointment = () => {
       
       <div className="inner-container">
 
-        <div className="card" style={{backgroundColor: '#ff6600'}}>
+        <div className="cards">
           <img src={jaipur} className="card-img-top " alt="image" />
           <div className="card-body">
             <p className="card-text">
@@ -37,16 +37,16 @@ const Appointment = () => {
           </div>
         </div>
 
-        <div className="card" style={{backgroundColor: 'white'}}>
+        <div className="cards">
           <img src={udaipur} className="card-img-top" alt="image" />
           <div className="card-body">
-            <p className="card-text text-dark">
+            <p className="card-text">
               Udaipur Police Station
             </p>
           </div>
         </div>
 
-        <div className="card" style={{backgroundColor: '#046434'}}>
+        <div className="cards">
           <img src={jaisalmer} className="card-img-top" alt="image" />
           <div className="card-body">
             <p className="card-text">
@@ -57,7 +57,7 @@ const Appointment = () => {
       </div>
 
       <div className="inner-container">
-        <div className="card" style={{backgroundColor: '#ff6600'}}>
+        <div className="cards">
           <img src={jaipur} className="card-img-top" alt="image" />
           <div className="card-body">
             <p className="card-text">
@@ -66,16 +66,16 @@ const Appointment = () => {
           </div>
         </div>
 
-        <div className="card" style={{backgroundColor: 'white'}}>
+        <div className="cards">
           <img src={jaipur} className="card-img-top" alt="image" />
           <div className="card-body">
-            <p className="card-text" style={{color: 'black'}}>
+            <p className="card-text">
             Gangapur Police Station
             </p>
           </div>
         </div>
 
-        <div className="card" style={{backgroundColor: '#046434'}}>
+        <div className="cards">
           <img src={jaipur} className="card-img-top" alt="image" />
           <div className="card-body">
             <p className="card-text">

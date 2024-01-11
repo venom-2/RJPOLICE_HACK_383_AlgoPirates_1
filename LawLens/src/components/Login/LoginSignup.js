@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye'
-import toast from "react-hot-toast";
+import toast from "react-hot-toast"; 
 
 
 export default function LoginSignup() {
