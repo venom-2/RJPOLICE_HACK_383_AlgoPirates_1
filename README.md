@@ -14,7 +14,7 @@ Law Lens is an Online Platform that minimizes the gap between Police and Citizen
 
 ## Frontend
 
-![Screenshot 2023-12-28 172200](https://github.com/venom-2/RJPOLICE_HACK_383_AlgoPirates_1/assets/103876428/34283271-ee7c-4f8f-864b-8e08ade002d3)
+![Screenshot 2024-01-11 142321](https://github.com/venom-2/RJPOLICE_HACK_383_AlgoPirates_1/assets/103876428/e1647839-0d06-4cc5-a15a-40f02371054a)
 
 ### Overview
 
