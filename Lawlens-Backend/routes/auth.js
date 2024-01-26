@@ -107,7 +107,7 @@ router.post('/login', [
 
     } catch (error) { 
         console.error("Login Error:", error);
-        res.status(500).send("Something went Wrong!");
+        res.status(500).send(error);
     }
 })
 
