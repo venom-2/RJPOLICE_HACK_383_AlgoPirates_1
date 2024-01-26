@@ -15,6 +15,7 @@ const linkStyle2 = {
 
 function FirformModal(props) {
 
+  const serverURL = "https://lawlens-vercel.vercel.app";
   const [cred, setCred] = useState({
     firstname: "",
     lastname: "",
@@ -30,7 +31,7 @@ function FirformModal(props) {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3001/api/fir/create', {
+      const response = await fetch(`${serverURL}/api/fir/create`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
