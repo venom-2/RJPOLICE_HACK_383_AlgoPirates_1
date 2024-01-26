@@ -12,6 +12,7 @@ import toast from 'react-hot-toast';
 
 const SignIn = () => {
   const history = useHistory();
+  const serverURL = "https://lawlens-vercel.vercel.app/";
   const [cred, setCred] = useState({ email: "", password: "", usertype: "" });
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
@@ -39,7 +40,7 @@ const SignIn = () => {
 
       if(!validateEmail(cred.email)) toast.error("Use correct Credentials")
       if (cred.usertype === 'user' && validateEmail(cred.email)) {
-        const response = await fetch(`http://localhost:3001/api/auth/login`, {
+        const response = await fetch(`${serverURL}/api/auth/login`, {
           method: 'POST',
           headers: {
             "Content-Type": 'application/json'

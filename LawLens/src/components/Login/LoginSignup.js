@@ -16,6 +16,7 @@ import toast from "react-hot-toast";
 export default function LoginSignup() {
 
   const history = useHistory();
+  const serverURL = "https://lawlens-vercel.vercel.app/";
   const [cred, setCred] = useState({ username: "", email: "", password: "", adharno: "", mobileno: "" });
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
@@ -44,7 +45,7 @@ export default function LoginSignup() {
       console.log(adharLength , mobileLength)
       if(!validateEmail(cred.email) || adharLength != 12 || mobileLength != 10) toast.error("Use correct Credentials")
       if (validateEmail(cred.email) && adharLength == 12 && mobileLength == 10) {
-        const response = await fetch("http://localhost:3001/api/auth/createuser", {
+        const response = await fetch(`${serverURL}/api/auth/createuser`, {
           method: 'POST',
           headers: {
             "Content-Type": 'application/json'
