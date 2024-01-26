@@ -106,7 +106,7 @@ router.post('/login', [
         res.json({ authToken : authToken , name : user.username});
 
     } catch (error) { 
-        // console.error("Login Error:", error);
+        console.error("Login Error:", error);
         res.status(500).send("Something went Wrong!");
     }
 })
