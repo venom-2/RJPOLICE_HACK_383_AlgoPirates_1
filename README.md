@@ -1,7 +1,7 @@
 Note:
-- Open deployed link of this web app https://lawlens.vercel.app/
+- Open the deployed link of this web app https://lawlens.vercel.app/
 - Sign up with your credentials
-- For now, the user can only log in as an admin (so kindly select admin from dropdown in sign in page)
+- For now, the user can only log in as an admin (so kindly select admin from the dropdown in the SignIn page)
 
 # Law Lens
 
