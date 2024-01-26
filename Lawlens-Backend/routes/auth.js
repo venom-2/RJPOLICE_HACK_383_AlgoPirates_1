@@ -93,10 +93,10 @@ router.post('/login', [
         }
 
         // Comparing for password
-        const containsPass = await bcrypt.compare(password, user.password);
-        if (!containsPass) {
-            return res.status(400).json({ errors: "Please enter correct Credentials" });
-        }
+        // const containsPass = await bcrypt.compare(password, user.password);
+        // if (!containsPass) {
+        //     return res.status(400).json({ errors: "Please enter correct Credentials" });
+        // }
 
         // if all well generate a auth token and return
         const Data = {
