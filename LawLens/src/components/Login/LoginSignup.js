@@ -16,7 +16,7 @@ import toast from "react-hot-toast";
 export default function LoginSignup() {
 
   const history = useHistory();
-  const serverURL = "https://lawlens-vercel.vercel.app/";
+  const serverURL = "https://lawlens-vercel.vercel.app";
   const [cred, setCred] = useState({ username: "", email: "", password: "", adharno: "", mobileno: "" });
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
