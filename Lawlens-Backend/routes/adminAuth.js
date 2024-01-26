@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const Admin = require('../models/Admin') ;
 const { body, validationResult } = require('express-validator');
@@ -34,14 +34,14 @@ router.post('/create', [
         }
 
         // Hashing the password with salt ---> using bcrypt
-        const salt = await bcrypt.genSalt(10);
-        const hashedPass = await bcrypt.hash(req.body.password, salt);
+        // const salt = await bcrypt.genSalt(10);
+        // const hashedPass = await bcrypt.hash(req.body.password, salt);
 
         // Creating user 
         admin = await Admin.create({
             adminname: req.body.adminname,
             email: req.body.email, 
-            password: hashedPass,
+            password: req.body.password,
             address1 : req.body.address1,
             address2 : req.body.address2,
             state : req.body.state,
