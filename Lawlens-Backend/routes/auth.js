@@ -68,13 +68,13 @@ router.post('/login', [
     body('email', ' Enter correct Email').isEmail(),
     body('password', 'Enter password').exists(),
 ], async (req, res) => {
-    const result = validationResult(req);
+    // const result = validationResult(req);
 
     // User creation using express-validator -- No login required
 
-    if (!result.isEmpty()) {
-        res.send({ errors: result.array() });
-    }
+    // if (!result.isEmpty()) {
+    //     res.send({ errors: result.array() });
+    // }
 
     
     // De-structuring request
