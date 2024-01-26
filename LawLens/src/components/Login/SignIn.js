@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 
 const SignIn = () => {
   const history = useHistory();
-  const serverURL = "https://lawlens-vercel.vercel.app/";
+  const serverURL = "https://lawlens-vercel.vercel.app";
   const [cred, setCred] = useState({ email: "", password: "", usertype: "" });
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
